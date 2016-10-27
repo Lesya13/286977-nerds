@@ -1,11 +1,162 @@
-	<!DOCTYPE html>
-	<html>
-	<head>
-	    <meta charset="utf-8">
-	    <link rel="stylesheet">
-		<title><Тестовая страница/title>
-	</head>
-	<body>
-	<h1>Обычный заголовок!</h1>
-	</body>
-	</html>
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница &mdash; Nerds</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a class="index-logo" href=""><img src="img/" width="150" height="120" alt="Nerd's"></a>
+                <a class="nav-item" href="">Студия</a>
+                <a class="nav-item" href="">Клиенты</a>
+                <a class="nav-item" href="">Магазин</a>
+                <a class="nav-item" href="">Контакты</a>
+            </nav>
+            <div class="basket">
+                <a href="">корзина</a>
+            </div>
+
+            <!-- Slider -->
+            <div class="slider">
+                <!-- Скрытые кнопки -->
+                <input type="radio" id="btn-1" name="toggle" checked>
+                <input type="radio" id="btn-2" name="toggle">
+                <input type="radio" id="btn-3" name="toggle">
+                <!-- Slider-controls -->
+                <div class="slider-controls">
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+                </div>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="slide-text">
+                            <div class="slide-title">Долго, дорого,
+                                <br>скрупулезно</div>
+                            <p>Математически выверенный дизайн
+                                <br>для вашего сайта или мобильного приложения.</p>
+                            <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-text">
+                            <div class="slide-title">Любим математику,
+                                <br> как никто другой</div>
+                            <p>Никакого креатива, только математические формулы
+                                <br>для расчета идеальных пропорций.</p>
+                            <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-text">
+                            <div class="slide-title">Только ночь,
+                                <br> только хардкор</div>
+                            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                            <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="promo">
+                <div class="promo-item">
+                    <img src="img/" width="150" height="120" alt="Веб-сайты">
+                    <h2 class="promo-title">Веб-сайты</h2>
+                    <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+                    <a class="btn red-btn" href="#">Заказать</a>
+                </div>
+                <div class="promo-item">
+                    <img src="img/" width="150" height="120" alt="Приложения">
+                    <h2 class="promo-title">Приложения</h2>
+                    <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+                    <a class="btn green-btn" href="#">Заказать</a>
+                </div>
+                <div class="promo-item">
+                    <img src="img/" width="150" height="120" alt="Презентации">
+                    <h2 class="promo-title">Презентации</h2>
+                    <p>Вы даже не подозреваете насколько вы изумительны!</p>
+                    <a class="btn yellow-btn" href="#">Заказать</a>
+                </div>
+            </section>
+
+            <section class="description">
+                <div class="description-company">
+                    <b class="description-company-title">
+                    Мы - маленькая, но гордая дизайн-студия из Краснодара.
+                    </b>
+                    <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы
+                    </p>
+                    <h3 class="description-company-title">Выполняем заказы на разработку:</h3>
+                    <ul class="description-company-list">
+                        <li class="description-company-item">Веб-сайтов любой сложности</li>
+                        <li class="description-company-item">Мобильных приложения для IOS и Android</li>
+                        <li class="description-company-item">Слайдшоу и видео для корпоративных презентаций</li>
+                    </ul>
+                </div>
+                <div class="description-features">
+                    <b>С 2004 года любим точность во всем:</b>
+                    <div class="description-features-item"><span>146%</span>Уровень самотдачи</div>
+                    <div class="description-features-item"><span>100%</span>Соблюдение сроков</div>
+                    <div class="description-features-item"><span>50%</span>Минимальная предоплата</div>
+                </div>
+            </section>
+            <div class="clients">
+                <img src="img/" width="150" height="120" alt="HTMLacademy">
+                <img src="img/" width="150" height="120" alt="Borodinski">
+                <img src="img/" width="150" height="120" alt="Pinck">
+                <img src="img/" width="150" height="120" alt="Mishka">
+            </div>
+        </div>
+        <div class="map">
+            <div class="container">
+                <div class="address">
+                    <h2 class="address-title">NЁRDS DESIGN STUDIO</h2>
+                    <p>191186, Санкт-Петербург,
+                        <br> ул. Б. Конюшенная, д. 19/8</p>
+                    <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+                    <a class="btn red-btn" href="#">Напишите нам</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="social">
+            <a class="social social-btn-vk" href="#">Вконтакте</a>
+            <a class="social social-btn-fb" href="#">Фейсбук</a>
+            <a class="social social-btn-inst" href="#">Инстаграм</a>
+        </div>
+
+        <div class="slogan">
+            <h2 class="slogan-title">Давайте дружить, это выгодно!</h2>
+            <p>Скидка 10% для друзей из соцальных сетей.</p>
+        </div>
+    </footer>
+    <!-- форма обратной связи -->
+    <div class="feedback">
+        <form class="feedback-form">
+            <button class="close-js" type="button"></button>
+            <fieldset>
+                <legend>Напишите нам</legend>
+                <label class="feedback-title" for="name">Ваше имя</label>
+                <input class="feedback-input" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
+                <label class="feedback-title" for="email">Ваш e-mail</label>
+                <input class="feedback-input" type="email" name="email" id="email" placeholder="Для отправки ответа" required>
+                <label class="feedback-title" for="text">Текст письма</label>
+                <textarea class="feedback-input" name="text" id="text" placeholder="В свободной форме" required></textarea>
+
+                <button class="btn feedback-btn" type="submit">Отправить</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
