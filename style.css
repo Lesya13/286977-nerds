@@ -4,13 +4,13 @@ body {
     margin: 0;
 }
 body {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto","Helvetica", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
 }
 body > input[type="checkbox"],
-input[type="radio"] {
+            input[type="radio"] {
     display: none;
 }
 a {
@@ -32,16 +32,16 @@ h2 {
 /*общие стили*/
 
 .container {
-    width: 1160px;
-    /* 
-padding: 0 20px;* ***************** временно выключено для наглядности сетки*/
+     width: 1160px;
+    /*
+    padding: 0 20px;* ***************** временно выключено для наглядности сетки*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto;
-    /*только для сетки*/ 
+    margin: 0 auto; 
+     /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
-    box-shadow: inset 0 0 0 2px green;
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 .btn {
     display: block;
@@ -74,11 +74,12 @@ padding: 0 20px;* ***************** временно выключено для �
     display: flex;
     flex-wrap: wrap;
     width: 900px;
-    /*только для сетки*/
+     /*только для сетки*/
     min-height: 65px;
     background-color: rgba(229, 91, 91, 0.2);
     box-shadow: inset 0 0 0 2px coral;
 }
+
 .nav-item {
     display: block;
     align-self: center;
@@ -97,21 +98,23 @@ padding: 0 20px;* ***************** временно выключено для �
     text-align: right;
     /*только для сетки*/
     background-color: rgba(229, 91, 91, 0.2);
-    box-shadow: inset 0 0 0 2px coral;
+    box-shadow: inset 0 0 0 2px coral; 
 }
 .basket-link {
-    color: #000000;
+    color: #000000;  
 }
 /*слайдер*/
+
 .slider {
     position: relative;
     width: 1160px;
     min-height: 423px;
     text-transform: none;
     overflow: hidden;
-    /*только для сетки*/
-    box-shadow: inset 0 0 0 2px coral;
+      /*только для сетки*/
+    box-shadow: inset 0 0 0 2px coral; 
 }
+
 .slide {
     position: absolute;
     top: 0;
@@ -130,6 +133,7 @@ padding: 0 20px;* ***************** временно выключено для �
     margin-left: -150px;
     text-align: center;
 }
+
 .slider-controls label {
     display: inline-block;
     width: 5px;
@@ -138,13 +142,14 @@ padding: 0 20px;* ***************** временно выключено для �
     vertical-align: top;
     background-color: #ffffff;
     border: 2px solid #ffffff;
-    box-shadow: 0 0 0 5px #ffffff;
+    box-shadow: 0 0 0 5px #ffffff; 
     border-radius: 50%;
     cursor: pointer;
 }
 .slide-text {
     width: 500px;
 }
+
 .slide-title {
     width: 600px;
     font-size: 55px;
@@ -153,44 +158,58 @@ padding: 0 20px;* ***************** временно выключено для �
     margin-top: 70px;
     margin-bottom: 24px;
 }
+
 .slide p {
     margin-bottom: 40px;
 }
 .red-btn {
     width: 240px;
     background-color: #fb565a;
+    
 }
+
 .slide:nth-child(1) {
     background-image: url("../img/slider-1.jpg");
+    
 }
+
 .slide:nth-child(2) {
     background-image: url("../img/slider-2.jpg");
 }
+
 .slide:nth-child(3) {
     background-image: url("../img/slider-3.jpg");
 }
+
 #btn-1:checked ~ .slides .slide:nth-child(1) {
     left: 0;
 }
+
 #btn-1:checked ~ .slides .slide:nth-child(2),
 #btn-1:checked ~ .slides .slide:nth-child(3) {
     left: 1160px;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(1) {
     left: -1160px;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(2) {
     left: 0;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(3) {
     left: -1160px;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(1) {
     left: -1160px;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(2) {
     left: -1160px;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     left: 0;
 }
@@ -198,28 +217,29 @@ padding: 0 20px;* ***************** временно выключено для �
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
     border: 2px solid #c1c1c1;
-}
+} 
 /*конец слайдера*/
 
 /*main*/
 main {
+   
 }
 .promo {
     width: 1100px;
-    display: flex;
+   display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 1px solid #eeeeee;
-    /*только для сетки*/
+     /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
     box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 .promo-item {
     width: 300px;
     margin-bottom: 85px;
-    /*только для сетки*/
+     /*только для сетки*/
     background-color: rgba(229, 91, 91, 0.2);
-    box-shadow: inset 0 0 0 2px coral;
+    box-shadow: inset 0 0 0 2px coral; 
 }
 .promo-image {
     width: 300px;
@@ -238,17 +258,14 @@ main {
 .red-btn-web,
 .green-btn,
 .yellow-btn {
-    width: 160px;
+    width: 160px; 
 }
 .red-btn-web {
-    background-color: #fb565a;
+   background-color: #fb565a;
 }
 .green-btn {
-    background-color: #00ca74;
+   background-color: #00ca74;
 }
 .yellow-btn {
     background-color: #efc84a;
-}
-.promo {
-    border-bottom: 
 }
