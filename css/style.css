@@ -4,13 +4,21 @@ body {
     margin: 0;
 }
 body {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto","Helvetica", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
 }
+:root {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
 body > input[type="checkbox"],
-input[type="radio"] {
+            input[type="radio"] {
     display: none;
 }
 a {
@@ -29,19 +37,44 @@ h2 {
     line-height: 30px;
     color: #000000;
 }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+legend {
+    padding: 0;
+    margin: 0;
+}
+button[type="submit"] {
+    outline: none;
+    border: none;
+}
+
+
+
 /*общие стили*/
 
 .container {
-    width: 1160px;
-    /* 
-padding: 0 20px;* ***************** временно выключено для наглядности сетки*/
+     width: 1160px;
+    /*
+    padding: 0 20px;* ***************** временно выключено для наглядности сетки*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto;
-    /*только для сетки*/ 
+    margin: 0 auto; 
+     /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
-    box-shadow: inset 0 0 0 2px green;
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 .btn {
     display: block;
@@ -51,6 +84,7 @@ padding: 0 20px;* ***************** временно выключено для �
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
+    background-color: #fb565a;
     border-radius: 3px;
 }
 /*шапка*/
@@ -74,11 +108,12 @@ padding: 0 20px;* ***************** временно выключено для �
     display: flex;
     flex-wrap: wrap;
     width: 900px;
-    /*только для сетки*/
+     /*только для сетки*/
     min-height: 65px;
     background-color: rgba(229, 91, 91, 0.2);
     box-shadow: inset 0 0 0 2px coral;
 }
+
 .nav-item {
     display: block;
     align-self: center;
@@ -97,21 +132,23 @@ padding: 0 20px;* ***************** временно выключено для �
     text-align: right;
     /*только для сетки*/
     background-color: rgba(229, 91, 91, 0.2);
-    box-shadow: inset 0 0 0 2px coral;
+    box-shadow: inset 0 0 0 2px coral; 
 }
 .basket-link {
-    color: #000000;
+    color: #000000;  
 }
 /*слайдер*/
+
 .slider {
     position: relative;
     width: 1160px;
-    min-height: 423px;
+    min-height: 420px;
     text-transform: none;
     overflow: hidden;
-    /*только для сетки*/
-    box-shadow: inset 0 0 0 2px coral;
+      /*только для сетки*/
+    box-shadow: inset 0 0 0 2px coral; 
 }
+
 .slide {
     position: absolute;
     top: 0;
@@ -130,6 +167,7 @@ padding: 0 20px;* ***************** временно выключено для �
     margin-left: -150px;
     text-align: center;
 }
+
 .slider-controls label {
     display: inline-block;
     width: 5px;
@@ -138,13 +176,14 @@ padding: 0 20px;* ***************** временно выключено для �
     vertical-align: top;
     background-color: #ffffff;
     border: 2px solid #ffffff;
-    box-shadow: 0 0 0 5px #ffffff;
+    box-shadow: 0 0 0 5px #ffffff; 
     border-radius: 50%;
     cursor: pointer;
 }
 .slide-text {
     width: 500px;
 }
+
 .slide-title {
     width: 600px;
     font-size: 55px;
@@ -153,44 +192,58 @@ padding: 0 20px;* ***************** временно выключено для �
     margin-top: 70px;
     margin-bottom: 24px;
 }
+
 .slide p {
     margin-bottom: 40px;
 }
-.red-btn {
+.btn-red {
     width: 240px;
     background-color: #fb565a;
+    
 }
+
 .slide:nth-child(1) {
     background-image: url("../img/slider-1.jpg");
+    
 }
+
 .slide:nth-child(2) {
     background-image: url("../img/slider-2.jpg");
 }
+
 .slide:nth-child(3) {
     background-image: url("../img/slider-3.jpg");
 }
+
 #btn-1:checked ~ .slides .slide:nth-child(1) {
     left: 0;
 }
+
 #btn-1:checked ~ .slides .slide:nth-child(2),
 #btn-1:checked ~ .slides .slide:nth-child(3) {
     left: 1160px;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(1) {
     left: -1160px;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(2) {
     left: 0;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(3) {
     left: -1160px;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(1) {
     left: -1160px;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(2) {
     left: -1160px;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     left: 0;
 }
@@ -198,28 +251,28 @@ padding: 0 20px;* ***************** временно выключено для �
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
     border: 2px solid #c1c1c1;
-}
+} 
 /*конец слайдера*/
 
 /*main*/
 main {
+   
 }
 .promo {
     width: 1100px;
-    display: flex;
+   display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-bottom: 1px solid #eeeeee;
-    /*только для сетки*/
+    margin-bottom: 82px;
+     /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
     box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 .promo-item {
     width: 300px;
-    margin-bottom: 85px;
-    /*только для сетки*/
+     /*только для сетки*/
     background-color: rgba(229, 91, 91, 0.2);
-    box-shadow: inset 0 0 0 2px coral;
+    box-shadow: inset 0 0 0 2px coral; 
 }
 .promo-image {
     width: 300px;
@@ -235,20 +288,339 @@ main {
     width: 260px;
     margin-bottom: 32px;
 }
-.red-btn-web,
-.green-btn,
-.yellow-btn {
-    width: 160px;
+.btn-promo-red,
+.btn-promo-green,
+.btn-promo-yellow {
+    width: 160px; 
 }
-.red-btn-web {
-    background-color: #fb565a;
+.btn-promo-green {
+   background-color: #00ca74;
 }
-.green-btn {
-    background-color: #00ca74;
-}
-.yellow-btn {
+.btn-promo-yellow {
     background-color: #efc84a;
 }
-.promo {
-    border-bottom: 
+.description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1160px;
+    
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+     /*только для сетки*/
+    background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
+.description-company {
+    width: 700px;
+    padding-top: 75px;
+    padding-bottom: 52px;
+      /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral; 
+}
+.description-company-title {
+    display: block;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    margin-bottom: 33px;
+}
+.description-company p {
+    display: block;
+    width: 620px;
+    margin-bottom: 39px;
+}
+.description-company-list {
+    
+}
+.description-title {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+.description-company-item {
+    padding-left: 37px;
+    margin-bottom: 24px;
+}
+.description-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 400px;
+    padding-top: 167px;
+    background: #eeeeee url("../img/nerds-illustration.jpg") no-repeat right 40px;
+    
+      /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;
+}
+.description-features .description-title {
+    margin-left: 58px;
+    margin-bottom: 47px;
+}
+.description-features-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 20px;
+}
+.description-features-item {
+    display: flex;
+    flex-flow: column wrap;
+  
+    width: 120px;
+    line-height: 18px;
+    text-align: center;
+     /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;
+}
+.description-features-item b {
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+}
+.description-features-item span {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.clients {
+    width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 80px;
+}
+.clients img {
+    width: 260px; 
+    height: 180px;
+    overflow: hidden;
+    opacity: 0.2;
+}
+
+.map {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 415px;
+    background: url("../img/map.jpg") no-repeat;
+    background-position: center -150px;
+     /*только для сетки*/
+    background-color: #eaeaea;
+    
+}
+.address {
+    display: flex;
+    flex-flow: column wrap;
+    width: 320px;
+    height: 310px;
+    padding-top: 33px;
+    padding-left: 52px;
+    padding-right: 50px;
+    background-color: #ffffff;
+    margin-top: 54px;
+    box-sizing: border-box;
+}
+.address-title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700; 
+    margin-bottom: 7px;
+}
+.address p,
+.address-tel {
+    line-height: 18px;
+    color: #666666;
+}
+.address-tel {
+    margin-bottom: 40px;
+}
+
+/*футер*/
+.main-footer {
+    padding-top: 68px;
+    padding-bottom: 20px;
+   /*только для сетки*/
+    background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45); 
+}
+.main-footer .container {
+    justify-content: flex-start;
+}
+.social {
+    width: 400px;
+    margin-right: 20px;
+     /*только для сетки*/
+    min-height: 78px;
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;
+}
+.slogan-title {
+    font-size: 36px;
+    line-height: 36px;
+}
+/*каталог*/
+
+.catalog-header {
+    margin-bottom: 38px;
+}
+.main-header-title {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    text-transform: none;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 107px;
+}
+.filter {
+    width: 260px;
+   /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;  
+}
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 16px;
+}
+.catalog {
+   width: 760px;
+    margin-bottom: 17px;
+   /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;    
+}
+.catlog-short {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+      /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;
+}
+.catalog-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 360px;
+   /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;
+}
+.total-title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.catalog-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 40px;
+   /*только для сетки*/
+    min-height: 615px;
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;  
+}
+.catalog-baner {
+    /*только для сетки*/
+    display: none;
+}
+.pagination {
+     width: 440px;
+     margin-left: 400px;
+    margin-bottom: 60px;
+   /*только для сетки*/
+    min-height: 50px;
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral; 
+}
+/*форма обратной связи*/
+.feedback {
+    display: none;
+    width: 960px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -374px;
+    margin-left: -480px;
+      /*только для сетки*/
+    height: 590px;
+}
+.feedback-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    font-family: "Roboto","Helvetica", "Arial", sans-serif;
+    padding-left: 100px;
+    padding-right: 95px;
+    padding-top: 66px;
+    padding-bottom: 84px;
+    background-color: #ffffff;
+}
+.btn-close-js {
+  /*только для сетки*/
+    display: none;
+}
+legend {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    margin-bottom: 38px;
+}
+.feedback-title {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px; 
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.feedback-title[for^="name"] {
+    color: #a3a3a3;
+    margin-right: 322px;;
+}
+.feedback-input {
+    width: 360px;
+    padding: 13px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    border: 2px solid #d7dcde;
+    margin-bottom: 32px;
+}
+.feedback-input[name^="name"] {
+    margin-right: 37px;
+}
+.feedback-textarea {
+    width: 760px;
+    min-height: 115px;
+    padding-top: 10px;
+    margin-bottom: 42px;
+}
+.feedback-btn {
+   width: 260px;
+}
+
+
+
+
