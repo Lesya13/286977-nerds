@@ -4,12 +4,16 @@ body {
     margin: 0;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
     font-family: "Roboto","Helvetica", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
 }
-:root {
+body {
     box-sizing: border-box;
 }
 *,
@@ -17,8 +21,8 @@ body {
 *::before {
     box-sizing: inherit;
 }
-body > input[type="checkbox"],
-            input[type="radio"] {
+   input[type="checkbox"],
+   input[type="radio"] {
     display: none;
 }
 a {
@@ -38,9 +42,9 @@ h2 {
     color: #000000;
 }
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
+    list-style:none;
 }
 li {
     margin: 0;
@@ -65,12 +69,11 @@ button[type="submit"] {
 /*общие стили*/
 
 .container {
-     width: 1160px;
-    /*
-    padding: 0 20px;* ***************** временно выключено для наглядности сетки*/
+    width: 1160px;
+    margin: 0 20px;/*так как  box-sizing: border-box;*/
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*для переноса контента - без него тут нельзя - родительский блок почти для всего контента, если делать column, то тогда везде надо добавлять обертку для дочерних блоков или предложи свое решение, я другого не вижу*/
     margin: 0 auto; 
      /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
@@ -99,30 +102,41 @@ button[type="submit"] {
     background: rgba(234, 255, 45, 0.2);
     box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
+
 .index-logo {
     width: 160px;
     min-height: 65px;
-    margin-right: 205px;
 }
 .main-nav {
     display: flex;
-    flex-wrap: wrap;
-    width: 900px;
+    justify-content: space-between;
+    width: 810px;
      /*только для сетки*/
     min-height: 65px;
     background-color: rgba(229, 91, 91, 0.2);
     box-shadow: inset 0 0 0 2px coral;
 }
-
-.nav-item {
-    display: block;
-    align-self: center;
-    color: #000000;
-    margin-top: 10px;
-    margin-right: 43px;
+.main-nav-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;/*для переноса контента - для прохождения теста на переполнение*/
+    list-style: none;
+    margin: 0;
+    padding-top: 27px;
+    width: 450px;
     /*только для сетки*/
     background-color: rgba(229, 91, 91, 0.2);
     box-shadow: inset 0 0 0 2px coral;
+}
+.nav-item {
+    display: block;
+    color: #000000;
+   /*только для сетки*/
+    background-color: rgba(229, 91, 91, 0.2);
+    box-shadow: inset 0 0 0 2px coral;
+}
+.nav-item:last-child {
+    margin-right: 0;
 }
 .basket {
     display: block;
@@ -142,7 +156,7 @@ button[type="submit"] {
 .slider {
     position: relative;
     width: 1160px;
-    min-height: 420px;
+    min-height: 432px;
     text-transform: none;
     overflow: hidden;
       /*только для сетки*/
@@ -154,29 +168,30 @@ button[type="submit"] {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 431px;
+    min-height: 432px;
     background-repeat: no-repeat;
-    background-position: right 0px top -9px;
+    background-position: right 0 top 0;
 }
 .slider-controls {
     position: absolute;
-    bottom: 80px;
-    right: 418px;
+    bottom: 93px;
+    left: 50%;
+    transform: translateX(32%);
     z-index: 10;
-    width: 300px;
+    width: 200px;
     margin-left: -150px;
     text-align: center;
 }
 
 .slider-controls label {
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    margin-right: 21px;
-    vertical-align: top;
+    display: inline-flex;
+    width: 7px;
+    height: 7px;
+    margin-right: 24px;
+    
     background-color: #ffffff;
     border: 2px solid #ffffff;
-    box-shadow: 0 0 0 5px #ffffff; 
+    box-shadow: 0 0 0 6px #ffffff; 
     border-radius: 50%;
     cursor: pointer;
 }
@@ -189,7 +204,7 @@ button[type="submit"] {
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
-    margin-top: 70px;
+    margin-top: 80px;
     margin-bottom: 24px;
 }
 
@@ -199,12 +214,10 @@ button[type="submit"] {
 .btn-red {
     width: 240px;
     background-color: #fb565a;
-    
 }
 
 .slide:nth-child(1) {
     background-image: url("../img/slider-1.jpg");
-    
 }
 
 .slide:nth-child(2) {
@@ -255,14 +268,11 @@ button[type="submit"] {
 /*конец слайдера*/
 
 /*main*/
-main {
-   
-}
 .promo {
-    width: 1100px;
-   display: flex;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 1100px;
     margin-bottom: 82px;
      /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
@@ -304,7 +314,6 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 1160px;
-    
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
      /*только для сетки*/
@@ -346,7 +355,7 @@ main {
 }
 .description-features {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     width: 400px;
@@ -363,10 +372,10 @@ main {
 }
 .description-features-list {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;/*тест на переполнение*/
     width: 400px;
-    margin: 0 20px;
+   
 }
 .description-features-item {
     display: flex;
@@ -380,6 +389,7 @@ main {
     box-shadow: inset 0 0 0 2px coral;
 }
 .description-features-item b {
+    display: block;
     position: relative;
     font-size: 45px;
     font-weight: 700;
@@ -390,6 +400,7 @@ main {
     right: 0px;
     font-size: 25px;
     font-weight: 500;
+    font-size: 25px;
 }
 .clients {
     width: 1160px;
@@ -397,7 +408,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid #eeeeee;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
 }
 .clients img {
     width: 260px; 
@@ -407,26 +418,23 @@ main {
 }
 
 .map {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 415px;
+    padding: 54px 0;
     background: url("../img/map.jpg") no-repeat;
     background-position: center -150px;
      /*только для сетки*/
     background-color: #eaeaea;
-    
+    min-height: 415px;
 }
 .address {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+   /* justify-content: space-around; не получается -  растягивает пробелы между текстом по вертикали*/
     width: 320px;
-    height: 310px;
+    min-height: 310px;
     padding-top: 33px;
     padding-left: 52px;
     padding-right: 50px;
     background-color: #ffffff;
-    margin-top: 54px;
-    box-sizing: border-box;
 }
 .address-title {
     font-size: 18px;
@@ -442,7 +450,9 @@ main {
 .address-tel {
     margin-bottom: 40px;
 }
-
+.address-btn {
+    margin-bottom: 47px;
+}
 /*футер*/
 .main-footer {
     padding-top: 68px;
@@ -452,9 +462,11 @@ main {
     box-shadow: inset 0 0 0 2px rgb(234, 255, 45); 
 }
 .main-footer .container {
+    display: flex;
     justify-content: flex-start;
+    
 }
-.social {
+.social-box {
     width: 400px;
     margin-right: 20px;
      /*только для сетки*/
@@ -488,7 +500,6 @@ main {
 }
 .filter-form {
     display: flex;
-    flex-wrap: wrap;
     padding-top: 16px;
 }
 .catalog {
@@ -500,7 +511,6 @@ main {
 }
 .catlog-short {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
@@ -544,7 +554,7 @@ main {
 }
 .pagination {
      width: 440px;
-     margin-left: 400px;
+     
     margin-bottom: 60px;
    /*только для сетки*/
     min-height: 50px;
