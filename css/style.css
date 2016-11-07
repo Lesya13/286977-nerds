@@ -67,17 +67,25 @@ button[type="submit"] {
 
 
 /*общие стили*/
-
+.site-wrapper {
+    /*для масштабирования*/
+    width: 1160px;
+    margin: 0 20px;
+    margin: 0 auto; 
+}
 .container {
     width: 1160px;
     margin: 0 20px;/*так как  box-sizing: border-box;*/
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /*для переноса контента - без него тут нельзя - родительский блок почти для всего контента, если делать column, то тогда везде надо добавлять обертку для дочерних блоков или предложи свое решение, я другого не вижу*/
+    flex-direction: column;
     margin: 0 auto; 
      /*только для сетки*/
     background: rgba(234, 255, 45, 0.2);
     box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+.line-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 .btn {
     display: block;
@@ -110,7 +118,7 @@ button[type="submit"] {
 .main-nav {
     display: flex;
     justify-content: space-between;
-    width: 810px;
+    
      /*только для сетки*/
     min-height: 65px;
     background-color: rgba(229, 91, 91, 0.2);
@@ -138,19 +146,18 @@ button[type="submit"] {
 .nav-item:last-child {
     margin-right: 0;
 }
-.basket {
+.basket-link {
     display: block;
     align-self: center;
     margin-top: 10px;
     width: 120px;
     text-align: right;
+     color: #000000; 
     /*только для сетки*/
     background-color: rgba(229, 91, 91, 0.2);
     box-shadow: inset 0 0 0 2px coral; 
 }
-.basket-link {
-    color: #000000;  
-}
+
 /*слайдер*/
 
 .slider {
