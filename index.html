@@ -15,12 +15,12 @@
                 <nav class="main-nav">
                     <img class="index-logo" src="img/index-logo.png" width="160" height="65" alt="Nerd's">
                     <ul class="main-nav-menu">
-                        <li><a class="nav-item" href="#">Студия</a></li>
+                        <li><a class="nav-item-active">Студия</a></li>
                         <li> <a class="nav-item" href="#">Клиенты</a></li>
                         <li><a class="nav-item" href="catalog.html">Магазин</a></li>
                         <li><a class="nav-item" href="#">Контакты</a></li>
                     </ul>
-                    <a class="basket-link" href="">корзина</a>
+                    <div class="basket"><a class="basket-link  icon" href="#">корзина</a></div>
                 </nav>
 
                 <!-- Slider -->
@@ -43,7 +43,7 @@
                                     Математически выверенный дизайн
                                     <br>для вашего сайта или мобильного приложения.
                                 </p>
-                                <a class="btn btn-red" href="#">Узнать больше</a>
+                                <a class="btn btn-slide" href="#">Узнать больше</a>
                             </div>
                         </div>
                         <div class="slide">
@@ -53,7 +53,7 @@
                                     Никакого креатива, только математические формулы
                                     <br>для расчета идеальных пропорций.
                                 </p>
-                                <a class="btn btn-red" href="#">Узнать больше</a>
+                                <a class="btn btn-slide" href="#">Узнать больше</a>
                             </div>
                         </div>
                         <div class="slide">
@@ -63,7 +63,7 @@
                                     Работать днем, как все? Мы против этого.
                                     <br>Ближе к полуночи работа только начинается.
                                 </p>
-                                <a class="btn btn-red" href="#">Узнать больше</a>
+                                <a class="btn btn-slide" href="#">Узнать больше</a>
                             </div>
                         </div>
                     </div>
@@ -110,20 +110,28 @@
                         </ul>
                     </div>
                     <div class="description-features">
-                        <b class="description-title">С 2004 года любим точность во всем:</b>
-                        <div class="description-features-list">
-                            <div class="description-features-item"><b>146<span>%</span></b>Уровень самотдачи</div>
-                            <div class="description-features-item"><b>100<span>%</span></b><span>%</span>Соблюдение сроков</div>
-                            <div class="description-features-item"><b>50<span>%</span></b>Минимальная предоплата</div>
+                        <div class="description-features-content">
+                            <b class="description-title">С 2004 года любим точность во всем:</b>
+                            <div class="description-features-list">
+                                <div class="description-features-item"><b>146<span>%</span></b>
+                                    <p>Уровень самотдачи</p>
+                                </div>
+                                <div class="description-features-item"><b>100<span>%</span></b>
+                                    <p>Соблюдение сроков</p>
+                                </div>
+                                <div class="description-features-item"><b>50<span class="features-item-last">%</span></b>
+                                    <p>Минимальная предоплата</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <div class="clients">
-                    <img src="img/htmlacademy.png" width="260" height="180" alt="HTMLacademy">
-                    <img src="img/borodinski.png" width="260" height="180" alt="Borodinski">
-                    <img src="img/pinck.png" width="260" height="180" alt="Pinck">
-                    <img src="img/mishka.png" width="260" height="180" alt="Mishka">
+                    <a class="clients-item-first" href="#"><img src="img/htmlacademy.png" width="260" height="180" alt="HTMLacademy"></a>
+                    <a class="clients-item" href="#"><img src="img/borodinski.png" width="260" height="180" alt="Borodinski"></a>
+                    <a class="clients-item" href="#"><img src="img/pinck.png" width="260" height="180" alt="Pinck"></a>
+                    <a class="clients-item" href="#"><img src="img/mishka.png" width="260" height="180" alt="Mishka"></a>
                 </div>
             </div>
 
@@ -142,11 +150,11 @@
 
         <footer class="main-footer">
             <div class="container">
-                <div class="line-wrapper">
+                <div class="footer-wrapper">
                     <div class="social-box">
-                        <a class="social social-btn-vk" href="#">Вконтакте</a>
-                        <a class="social social-btn-fb" href="#">Фейсбук</a>
-                        <a class="social social-btn-inst" href="#">Инстаграм</a>
+                        <a class="social  social-btn-vk  icon" href="#">Вконтакте</a>
+                        <a class="social  social-btn-fb  icon" href="#">Фейсбук</a>
+                        <a class="social  social-btn-inst icon" href="#">Инстаграм</a>
                     </div>
 
                     <div class="slogan">
@@ -159,20 +167,23 @@
         <!-- форма обратной связи -->
         <div class="feedback">
             <form class="feedback-form">
-                <button class="btn-close-js" type="button"></button>
+                <button class="js-btn-close icon" type="button">Закрыть</button>
                 <fieldset>
                     <legend>Напишите нам</legend>
-                    <label class="feedback-title" for="name">Ваше имя</label>
-                    <label class="feedback-title" for="email">Ваш e-mail</label>
-                    <input class="feedback-input" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
-                    <input class="feedback-input" type="email" name="email" id="email" placeholder="Для отправки ответа" required>
-                    <label class="feedback-title" for="text">Текст письма</label>
-                    <textarea class="feedback-input  feedback-textarea" name="text" id="text" placeholder="В свободной форме" required></textarea>
+                    <div class="feedback-title-list">
+                        <label class="feedback-title" for="name">Ваше имя</label>
+                        <label class="feedback-title" for="address">Ваш e-mail</label>
+                    </div>
+                    <input class="feedback-input" type="text" name="login" id="name" placeholder="Представьтесь, пожалуйста" required>
+                    <input class="feedback-input" type="email" name="email" id="address" placeholder="Для отправки ответа" required>
+                    <label class="feedback-title" for="letter">Текст письма</label>
+                    <textarea class="feedback-input  feedback-textarea" name="text" id="letter" placeholder="В свободной форме" required></textarea>
                     <button class="btn feedback-btn" type="submit">Отправить</button>
                 </fieldset>
             </form>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
