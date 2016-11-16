@@ -66,3 +66,19 @@ link.addEventListener("click", function (event) {
     lining.addEventListener("click", exit, true);
     close.addEventListener("click", exit, true);
 });
+
+// Настройка карты
+function initMap() {
+  var mapDiv = document.querySelector('.google-maps');
+  var myLatLng = {lat: 59.938810, lng: 30.323400};
+  var map = new google.maps.Map(mapDiv, {
+    center: myLatLng,
+    zoom: 15
+  });
+ var image = "img/map-marker.png";
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: image
+  });
+}
