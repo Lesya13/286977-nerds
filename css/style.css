@@ -1,13 +1,13 @@
-html {
-    height: 100%;
-}
 
+html {
+      height: 100%;  
+}
 html,
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto","Helvetica", "Arial", sans-serif;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -15,67 +15,56 @@ body {
     line-height: 24px;
     color: #283136;
 }
-
 body {
     box-sizing: border-box;
 }
-
 *,
 *::after,
 *::before {
     box-sizing: inherit;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
+    
+} 
+   input[type="checkbox"],
+   input[type="radio"] {
     display: none;
 }
-
 a {
     display: block;
     text-decoration: none;
     transition: 200ms;
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 p {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
 }
-
 h2 {
     font-size: 24px;
     line-height: 30px;
     color: #000000;
 }
-
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin:0;
+    padding:0;
+    list-style:none;
 }
-
 li {
     margin: 0;
     padding: 0;
 }
-
 fieldset {
     border: none;
     margin: 0;
     padding: 0;
 }
-
 legend {
     padding: 0;
     margin: 0;
 }
-
 button[type="button"],
 button[type="submit"] {
     outline: none;
@@ -83,8 +72,8 @@ button[type="submit"] {
 }
 
 
-/*общие стили*/
 
+/*общие стили*/
 .site-wrapper {
     /*для масштабирования*/
     display: flex;
@@ -92,16 +81,13 @@ button[type="submit"] {
     width: 100%;
     height: 100%;
 }
-
 .container {
     width: 1160px;
-    margin: 0 20px;
-    /*так как  box-sizing: border-box;*/
+    margin: 0 20px;/*так как  box-sizing: border-box;*/
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
-
 .btn {
     display: block;
     padding: 16px 0;
@@ -114,17 +100,14 @@ button[type="submit"] {
     border-radius: 3px;
     transition: 300ms;
 }
-
 .btn:hover {
     background-color: #e74246;
 }
-
 .btn:active {
     background-color: #d7373b;
     box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
     color: rgba(255, 255, 255, 0.3);
 }
-
 .icon::before {
     position: absolute;
     content: "";
@@ -134,10 +117,7 @@ button[type="submit"] {
     background-repeat: no-repeat;
     background-color: transparent;
 }
-
-
 /*шапка*/
-
 .main-header {
     flex: 1 0 auto;
     padding-top: 48px;
@@ -148,85 +128,69 @@ button[type="submit"] {
     background-color: #eeeeee;
     margin-bottom: 80px;
 }
-
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     flex-wrap: wrap;
     width: 1160px;
 }
-
 .index-logo {
     width: 160px;
     min-height: 65px;
     overflow: hidden;
     cursor: pointer;
 }
-
 .index-logo:hover {
     opacity: 0.8;
     cursor: pointer;
 }
-
 .index-logo:active {
     opacity: 0.3;
     cursor: pointer;
 }
-
 .main-nav-menu {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    /*для переноса контента - для прохождения теста на переполнение*/
+    flex-wrap: wrap;/*для переноса контента - для прохождения теста на переполнение*/
     width: 480px;
     list-style: none;
     margin: 0;
     padding-top: 27px;
 }
-
 .nav-item-active,
 .nav-item {
     color: #000000;
 }
-
-.nav-item-active {
+.nav-item-active  {
     border-bottom: 2px solid #fb565a;
 }
-
 .nav-item-active:hover,
 .nav-item:hover {
     color: #fb565a;
 }
-
 .nav-item-active:active,
 .nav-item:active {
     color: rgba(0, 0, 0, 0.3);
 }
-
 .basket {
-    display: flex;
-    /*для переноса контента - для прохождения теста на переполнение*/
+    display: flex;/*для переноса контента - для прохождения теста на переполнение*/
     flex-wrap: wrap;
     width: 160px;
     margin: 0;
     padding-top: 28px;
     padding-left: 85px;
 }
-
 .basket-link {
     width: 160px;
     position: relative;
     color: #000000;
 }
-
 .basket-link:hover {
     color: #fb565a;
 }
-
 .basket-link:active {
     color: rgba(0, 0, 0, 0.3);
 }
-
 .basket-link::before {
     top: 5px;
     left: -40px;
@@ -235,7 +199,6 @@ button[type="submit"] {
     background-position: -15px -15px;
     opacity: 0.3;
 }
-
 
 /*слайдер*/
 
@@ -246,7 +209,6 @@ button[type="submit"] {
     text-transform: none;
     overflow: hidden;
 }
-
 .slide {
     position: absolute;
     top: 0;
@@ -256,7 +218,6 @@ button[type="submit"] {
     background-repeat: no-repeat;
     background-position: right 0 top 0;
 }
-
 .slider-controls {
     position: absolute;
     bottom: 93px;
@@ -267,23 +228,21 @@ button[type="submit"] {
     margin-left: -150px;
     text-align: center;
 }
-
 .slider-controls label {
     display: inline-flex;
     width: 7px;
     height: 7px;
     margin-right: 24px;
+    
     background-color: #ffffff;
     border: 2px solid #ffffff;
-    box-shadow: 0 0 0 6px #ffffff;
+    box-shadow: 0 0 0 6px #ffffff; 
     border-radius: 50%;
     cursor: pointer;
 }
-
 .slide-text {
     width: 500px;
 }
-
 .slide-title {
     width: 600px;
     font-size: 55px;
@@ -292,11 +251,9 @@ button[type="submit"] {
     margin-top: 79px;
     margin-bottom: 25px;
 }
-
 .slide p {
     margin-bottom: 40px;
 }
-
 .btn-slide {
     width: 240px;
 }
@@ -345,23 +302,17 @@ button[type="submit"] {
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     left: 0;
 }
-
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
     border: 2px solid #c1c1c1;
-}
-
-
+} 
 /*конец слайдера*/
 
-
 /*main*/
-
 .main {
     flex: 1 0 auto;
 }
-
 .promo {
     display: flex;
     justify-content: space-between;
@@ -369,58 +320,46 @@ button[type="submit"] {
     width: 1100px;
     margin-bottom: 82px;
 }
-
 .promo-item {
     width: 300px;
 }
-
 .promo-image {
     width: 300px;
     height: 146px;
     overflow: hidden;
     margin-bottom: 17px;
 }
-
 .promo-title {
     text-transform: uppercase;
     margin: 0;
 }
-
 .promo-item p {
     width: 260px;
     margin-bottom: 32px;
 }
-
 .btn-promo-red,
 .btn-promo-green,
 .btn-promo-yellow {
-    width: 160px;
+    width: 160px; 
 }
-
 .btn-promo-green {
-    background-color: #00ca74;
+   background-color: #00ca74;
 }
-
 .btn-promo-green:hover {
-    background-color: #00bc6c;
+   background-color: #00bc6c;
 }
-
 .btn-promo-green:active {
-    background-color: #00aa62;
+   background-color: #00aa62;
 }
-
 .btn-promo-yellow {
     background-color: #efc84a;
 }
-
 .btn-promo-yellow:hover {
     background-color: #eab534;
 }
-
 .btn-promo-yellow:active {
     background-color: #e5a722;
 }
-
 .description {
     display: flex;
     justify-content: space-between;
@@ -428,13 +367,11 @@ button[type="submit"] {
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
 }
-
 .description-company {
     width: 700px;
     padding-top: 75px;
     padding-bottom: 48px;
 }
-
 .description-company-title {
     display: block;
     font-size: 45px;
@@ -442,17 +379,14 @@ button[type="submit"] {
     font-weight: 500;
     margin-bottom: 33px;
 }
-
 .description-company p {
     display: block;
     width: 620px;
     margin-bottom: 39px;
 }
-
 .description-company-item {
     position: relative;
 }
-
 .description-company-item::before {
     position: absolute;
     content: "";
@@ -462,19 +396,16 @@ button[type="submit"] {
     height: 2px;
     background-color: #fb565a;
 }
-
 .description-title {
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
     margin-bottom: 23px;
 }
-
 .description-company-item {
     padding-left: 37px;
     margin-bottom: 24px;
 }
-
 .description-features {
     display: flex;
     flex-direction: column;
@@ -483,37 +414,30 @@ button[type="submit"] {
     padding: 10px 20px;
     background: url("../img/nerds-illustration.jpg") no-repeat right 40px;
 }
-
 .description-features-content {
     display: flex;
     flex-direction: column;
     padding-left: 5px;
 }
-
 .description-features-content .description-title {
     display: block;
     align-self: flex-end;
     margin-bottom: 55px;
 }
-
 .description-features-list {
     display: flex;
-    flex-wrap: wrap;
-    /*тест на переполнение*/
+    flex-wrap: wrap;/*тест на переполнение*/
     width: 360px;
     margin-left: 15px;
     margin-bottom: 50px;
 }
-
 .description-features-item {
     display: flex;
-    flex-flow: column wrap;
-    /*тест на переполнение*/
+    flex-flow: column wrap;/*тест на переполнение*/
     width: 100px;
     line-height: 18px;
     margin-right: 20px;
 }
-
 .description-features-item b {
     display: block;
     position: relative;
@@ -521,7 +445,6 @@ button[type="submit"] {
     font-weight: 700;
     margin-bottom: 17px;
 }
-
 .description-features-item span {
     position: absolute;
     top: -8px;
@@ -530,60 +453,50 @@ button[type="submit"] {
     font-weight: 600;
     font-size: 25px;
 }
-
 .features-item-last {
     transform: translateX(-28px);
 }
-
 .description-features-item p {
     line-height: 18px;
 }
-
 .clients {
     width: 1160px;
     display: flex;
-    flex-wrap: wrap;
-    /*тест на переполнение*/
+    flex-wrap: wrap;/*тест на переполнение*/
     justify-content: space-between;
     max-height: 180px;
     border-bottom: 2px solid #eeeeee;
     margin-bottom: 82px;
 }
-
 .clients img {
-    width: 260px;
+    width: 260px; 
     height: 180px;
     overflow: hidden;
     opacity: 0.2;
     transition: 300ms;
     border: none;
 }
-
 .clients img:hover {
     opacity: 1;
 }
-
 .clients img:active {
     opacity: 0.1;
 }
-
 .clients-item {
     display: flex;
     justify-content: flex-end;
-    position: relative;
+    position: relative; 
     width: 300px;
 }
-
 .clients-item::before {
-    position: absolute;
+   position: absolute;
     content: "";
     top: 35%;
     left: 20px;
     width: 2px;
     height: 50px;
-    background-color: #eeeeee;
+    background-color: #eeeeee; 
 }
-
 .map {
     position: relative;
     display: -webkit-box;
@@ -596,7 +509,6 @@ button[type="submit"] {
     background: url("../img/map.jpg") no-repeat;
     background-position: center -150px;
 }
-
 .google-maps {
     position: absolute;
     top: 0;
@@ -604,9 +516,8 @@ button[type="submit"] {
     width: 100%;
     height: 100%;
     min-height: 415px;
-    z-index: 10;
+     z-index: 10;
 }
-
 .address {
     position: absolute;
     top: 54px;
@@ -620,49 +531,38 @@ button[type="submit"] {
     background-color: #ffffff;
     z-index: 21;
 }
-
 .address-title {
     font-size: 18px;
     line-height: 30px;
-    font-weight: 700;
+    font-weight: 700; 
     margin-bottom: 7px;
 }
-
 .address p,
 .address-tel {
     line-height: 18px;
     color: #666666;
 }
-
 .address-tel {
     margin-bottom: 40px;
 }
-
 .address-btn {
     margin-bottom: 47px;
 }
-
-
 /*футер*/
-
 .main-footer {
     flex: 1 0 auto;
     padding-top: 68px;
     padding-bottom: 40px;
 }
-
 .footer-wrapper {
     display: flex;
 }
-
 .social-box {
     display: flex;
-    flex-wrap: wrap;
-    /*тест на переполнение*/
+    flex-wrap: wrap;/*тест на переполнение*/
     width: 380px;
     margin-right: 20px;
 }
-
 .social {
     position: relative;
     width: 80px;
@@ -672,76 +572,61 @@ button[type="submit"] {
     font-size: 0;
     margin-right: 10px;
 }
-
 .social:hover {
     background-color: #e74246;
 }
-
 .social:active {
     background-color: #d7373b;
     box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.1);
 }
-
 .social-btn-vk::before {
     width: 26px;
     height: 15px;
     background-position: -15px -398px;
     transform: translate(27px, -7px);
 }
-
 .social-btn-fb::before {
     width: 12px;
     height: 22px;
     background-position: -15px -217px;
     transform: translate(35px, -11px);
 }
-
 .social-btn-inst::before {
     width: 21px;
     height: 21px;
-    background-position: -15px -269px;
+   background-position: -15px -269px;
     transform: translate(30px, -10px);
 }
-
 .social-btn-vk:active::before {
     opacity: 0.3;
 }
-
 .social-btn-fb:active::before {
     opacity: 0.3;
 }
-
 .social-btn-inst:active::before {
-    opacity: 0.3;
+     opacity: 0.3;
 }
-
 .slogan {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    /*тест на переполнение*/
+    flex-wrap: wrap;/*тест на переполнение*/
     width: 560px;
     padding-top: 7px;
 }
-
 .slogan-title {
     font-size: 36px;
     line-height: 36px;
     margin: 0;
     margin-bottom: 9px;
 }
-
 .slogan p {
     margin: 0;
 }
-
-
 /*каталог*/
 
 .catalog-header {
     margin-bottom: 38px;
 }
-
 .main-header-title {
     display: flex;
     justify-content: center;
@@ -752,37 +637,29 @@ button[type="submit"] {
     margin-top: 69px;
     margin-bottom: 107px;
 }
-
-
 /*catalog main*/
 
 .catalog-wrapper {
     display: flex;
     justify-content: space-between;
 }
-
-
 /*фильтр*/
 
 .filter {
     width: 260px;
 }
-
 .filter-form {
     display: flex;
     padding-top: 16px;
 }
-
 legend {
-    padding-bottom: 12px;
+   padding-bottom: 12px;
 }
-
 .filter-range {
     margin-bottom: 38px;
 }
-
 .filter-range-controls {
-    position: relative;
+  position: relative;
     width: 260px;
     padding-top: 39px;
     padding-right: 20px;
@@ -793,18 +670,15 @@ legend {
     background-color: #f1f1f1;
     margin-bottom: 15px;
 }
-
 .filter-range-scale {
     height: 2px;
     background: #d7dcde;
 }
-
 .filter-range-bar {
     width: 70%;
     height: 2px;
     background: #00ca74;
 }
-
 .filter-toggle {
     position: absolute;
     top: 30px;
@@ -817,20 +691,16 @@ legend {
     background: #ababab;
     box-shadow: 0 2px 1px 0 #cfcfcf;
 }
-
 .filter-toggle-min {
     left: 17px;
 }
-
 .filter-toggle-max {
     left: 160px;
 }
-
 .filter-price-controls {
     width: 260px;
     font-size: 0;
 }
-
 .filter-price-controls label {
     width: 50%;
     font-size: 16px;
@@ -838,11 +708,9 @@ legend {
     text-transform: uppercase;
     display: inline-block;
 }
-
 .filter-max-price {
-    text-align: right;
+  text-align: right;
 }
-
 .filter-price-controls input {
     width: 80px;
     font-family: 'Roboto', 'Arial', sans-serif;
@@ -857,24 +725,21 @@ legend {
     background: #f1f1f1;
     margin-left: 10px;
 }
-
 .filter-item {
     display: flex;
-    flex-flow: column wrap;
-    /*тест на переполнение*/
+    flex-flow: column wrap; /*тест на переполнение*/
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 11px;
 }
-
 .filter-text-radio,
 .filter-text-checkbox {
     display: block;
     position: relative;
     padding-left: 37px;
     margin-bottom: 20px;
+    
 }
-
 .filter-text-radio::before {
     content: "";
     position: absolute;
@@ -882,19 +747,17 @@ legend {
     left: 2px;
     width: 24px;
     height: 24px;
-    border: 3px solid #4d4d4d;
+    border: 3px solid #4d4d4d; 
     border-radius: 50%;
     opacity: 0.4;
+    
 }
-
-.filter-text-radio:hover::before {
-    opacity: 1;
+.filter-text-radio:hover::before{
+      opacity: 1;
 }
-
-.filter-text-radio:active::before {
-    opacity: 0.1;
+.filter-text-radio:active::before{
+     opacity: 0.1;
 }
-
 input[type="radio"]:checked + label::after {
     content: "";
     position: absolute;
@@ -902,19 +765,16 @@ input[type="radio"]:checked + label::after {
     left: 10px;
     width: 8px;
     height: 8px;
-    background-color: #4d4d4d;
+    background-color: #4d4d4d; 
     border-radius: 50%;
     opacity: 0.4;
 }
-
 input[type="radio"]:checked + label:hover::after {
     opacity: 1;
 }
-
 input[type="radio"]:checked + label:active::after {
-    opacity: 0.1;
+   opacity: 0.1;  
 }
-
 .filter-text-checkbox::before {
     top: 5px;
     left: 13px;
@@ -923,66 +783,52 @@ input[type="radio"]:checked + label:active::after {
     height: 23px;
     opacity: 0.4;
     background-position: -15px -60px;
-    transform: translate(-12px, -6px);
+    transform: translate(-12px,-6px);
 }
-
 .filter-text-checkbox:hover::before {
     opacity: 1;
 }
-
 input[type="checkbox"]:checked + label::before {
     width: 27px;
     height: 23px;
     background-position: -15px -113px;
-    transform: translate(-12px, -6px);
+    transform: translate(-12px,-6px);
     opacity: 0.4;
 }
-
 input[type="checkbox"]:checked + label:hover::before {
     opacity: 1;
 }
-
 input[type="checkbox"]:checked + label:active::before {
-    opacity: 0.1;
+  opacity: 0.1;
 }
-
 .filter-alt-pos {
     margin-bottom: 30px;
 }
-
 .filter-btn {
     width: 260px;
     background-color: #f1f1f1;
     color: #000000;
 }
-
 .filter-btn:hover {
     background-color: #dfdfdf;
 }
-
 .filter-btn:active {
     background-color: #d5d5d5;
     color: rgba(0, 0, 0, 0.3);
 }
-
-
 /*окончание фильтра*/
 
-
 /*каталог*/
-
 .catalog {
     width: 760px;
     margin-bottom: 17px;
 }
-
 .total-title {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .catlog-short {
     display: flex;
     justify-content: space-between;
@@ -992,11 +838,9 @@ input[type="checkbox"]:checked + label:active::before {
     text-transform: uppercase;
     margin-bottom: 36px;
 }
-
 .menu-item {
-    color: rgba(0, 0, 0, 0.3);
+     color: rgba(0, 0, 0, 0.3);
 }
-
 .catalog-menu {
     position: relative;
     display: flex;
@@ -1005,31 +849,25 @@ input[type="checkbox"]:checked + label:active::before {
     width: 360px;
     padding-right: 35px;
 }
-
 .menu-item-active:hover,
 .menu-item:hover {
     color: rgba(0, 0, 0, 0.6);
 }
-
 .menu-item:active {
     color: rgba(0, 0, 0, 1);
 }
-
 .menu-item-down-active::before {
     width: 9px;
     height: 9px;
     background-position: -15px -320px;
     transform: translate(320px, -5px);
 }
-
 .menu-item-down-active:hover::before {
-    opacity: 0.4;
+   opacity: 0.4;
 }
-
 .menu-item-down-active:active::before {
-    opacity: 1;
+   opacity: 1;
 }
-
 .menu-item-down::before {
     width: 9px;
     height: 9px;
@@ -1037,24 +875,20 @@ input[type="checkbox"]:checked + label:active::before {
     transform: translate(350px, -5px);
     opacity: 0.2;
 }
-
 .menu-item-down:hover::before,
 .menu-item-down-active:hover::before {
-    opacity: 0.4;
+   opacity: 0.4;
 }
-
 .menu-item-down:active::before,
 .menu-item-down-active:active::before {
-    opacity: 1;
+   opacity: 1;
 }
-
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 24px;
 }
-
 .catalog-item {
     display: flex;
     align-items: flex-end;
@@ -1062,16 +896,14 @@ input[type="checkbox"]:checked + label:active::before {
     padding-top: 40px;
     background-color: #e9e9e9;
     border-radius: 4px;
-    margin-bottom: 37px;
+    margin-bottom: 37px; 
     transition: 200ms;
 }
-
 .catalog-item img {
     width: 360px;
     height: 576px;
     overflow: hidden;
 }
-
 .circle-box {
     display: none;
     position: absolute;
@@ -1085,7 +917,6 @@ input[type="checkbox"]:checked + label:active::before {
     margin: 0 auto;
     z-index: 1;
 }
-
 .circle {
     position: absolute;
     top: 4px;
@@ -1097,7 +928,6 @@ input[type="checkbox"]:checked + label:active::before {
     transform: translate(10px, 10px);
     z-index: 2;
 }
-
 .circle-item::before,
 .circle-item::after {
     position: absolute;
@@ -1107,13 +937,11 @@ input[type="checkbox"]:checked + label:active::before {
     background-color: #ffffff;
     border-radius: 50%;
     transform: translateX(23px);
-    z-index: 2;
+     z-index: 2;
 }
-
 .circle-item::after {
     transform: translateX(45px);
 }
-
 .catalog-baner {
     display: none;
     position: absolute;
@@ -1122,10 +950,9 @@ input[type="checkbox"]:checked + label:active::before {
     left: 0px;
     padding: 0px 50px;
     padding-top: 27px;
-    background-color: #eeeeee;
+    background-color:  #eeeeee;
     z-index: 1;
 }
-
 .baner-title {
     display: block;
     margin: 0;
@@ -1134,7 +961,6 @@ input[type="checkbox"]:checked + label:active::before {
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-
 .baner-text {
     display: block;
     text-align: center;
@@ -1143,7 +969,6 @@ input[type="checkbox"]:checked + label:active::before {
     margin: 0;
     margin-bottom: 30px;
 }
-
 .baner-btn {
     width: 200px;
     padding: 16px 20px;
@@ -1152,29 +977,23 @@ input[type="checkbox"]:checked + label:active::before {
     margin: 0 auto;
     margin-bottom: 43px;
 }
-
 .catalog-item:hover {
-    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 15px 0  rgba(0, 0, 0, 0.25);
 }
-
 .catalog-item:hover .circle-box {
     display: block;
 }
-
 .catalog-item:hover .catalog-baner {
     display: block;
 }
-
 .pagination {
-    display: flex;
-    flex-wrap: wrap;
-    /*тест на переполнение*/
+     display: flex;
+    flex-wrap: wrap; /*тест на переполнение*/
     justify-content: space-between;
     align-items: center;
     width: 443px;
     margin-bottom: 43px;
 }
-
 .pagination a {
     text-align: center;
     color: #000000;
@@ -1184,23 +1003,19 @@ input[type="checkbox"]:checked + label:active::before {
     padding: 13px 20px;
     border-radius: 5px;
 }
-
 .pagination a:hover {
     background-color: #dfdfdf;
 }
-
 .pagination a:active {
     background-color: #d5d5d5;
     box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
-
 .pagination .pagination-active {
     background-color: #ffffff;
     padding: 10px 18px;
     border: 3px solid #dbdbdb;
     border-radius: 5px;
 }
-
 .pagination-next {
     width: 260px;
 }
@@ -1208,6 +1023,15 @@ input[type="checkbox"]:checked + label:active::before {
 
 /*форма обратной связи*/
 
+.feedback-overlay {
+     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+}
 .feedback {
     z-index: 23;
     display: none;
@@ -1217,7 +1041,6 @@ input[type="checkbox"]:checked + label:active::before {
     width: 100%;
     height: 100vh;
 }
-
 .feedback-form {
     position: relative;
     display: flex;
@@ -1225,7 +1048,7 @@ input[type="checkbox"]:checked + label:active::before {
     width: 960px;
     top: 50%;
     left: 50%;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Roboto","Helvetica", "Arial", sans-serif;
     padding-left: 100px;
     padding-right: 95px;
     padding-top: 66px;
@@ -1236,33 +1059,28 @@ input[type="checkbox"]:checked + label:active::before {
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
     z-index: 30;
 }
-
 legend {
     font-size: 45px;
     line-height: 45px;
     font-weight: 500;
     margin-bottom: 38px;
 }
-
 .feedback-title-list {
     display: flex;
     justify-content: space-between;
     width: 485px;
 }
-
 .feedback-title {
     display: block;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 18px; 
     font-weight: 500;
     color: #000000;
     margin-bottom: 10px;
 }
-
 .feedback-title[for^="name"] {
     color: #a3a3a3;
 }
-
 .feedback-input {
     width: 360px;
     padding: 13px;
@@ -1275,48 +1093,40 @@ legend {
     border: 2px solid #d7dcde;
     margin-bottom: 32px;
 }
-
 .feedback-input[name^="name"] {
     margin-right: 37px;
 }
-
 .feedback-textarea {
     width: 760px;
     min-height: 115px;
     padding-top: 10px;
     margin-bottom: 42px;
 }
-
 input[type="text"],
 input[type="email"],
-textarea {
+textarea { 
     transition: 500ms;
 }
-
 input[type="text"]:hover,
 input[type="email"]:hover,
-textarea:hover {
-    border-color: #b4b9bb;
+textarea:hover { 
+  border-color: #b4b9bb; 
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     border-color: #000000;
     outline: none;
 }
-
 .feedback-btn {
-    width: 260px;
+   width: 260px;
 }
-
 .js-btn-close {
     font-size: 0;
     padding: 0;
     border: none;
     outline: none;
 }
-
 .js-btn-close::before {
     width: 21px;
     height: 21px;
@@ -1325,72 +1135,75 @@ textarea:focus {
     opacity: 0.3;
     transition: 300ms;
 }
-
 .js-btn-close:hover::before {
     opacity: 1;
 }
-
 .js-btn-close:active::before {
     opacity: 0.1;
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(-2000px);
-    }
-    70% {
-        transform: translateY(30px);
-    }
-    90% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.feedback-overlay-show,
+.feedback-show  {
+  display: block;
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
 
-@keyframes shake {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(10px);
-    }
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .feedback-show {
-    display: block;
+  animation: bounce 0.6s;
+}
+@keyframes shake {
+  0%,
+  to {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
-.feedback .feedback-error {
-    display: block;
-    -webkit-animation: shake 0.6s;
-    animation: shake 0.6s;
+.feedback-error {
+  animation: shake 0.6s;
 }
 
-.feedback-bounce {
-    display: block;
-    -webkit-animation: bounce 0.6s;
-    animation: bounce 0.6s;
-}
 
-.lining {
-    z-index: 25;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
