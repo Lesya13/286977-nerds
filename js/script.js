@@ -1,4 +1,5 @@
 //обратная связь
+
 var link = document.querySelector(".address-btn");
 var popup = document.querySelector(".feedback");
 var close = document.querySelector(".js-btn-close");
@@ -36,15 +37,11 @@ overlay.addEventListener("click", function (a) {
 popup.classList.contains("feedback-show") && (popup.classList.remove("feedback-show"), popup.classList.remove("feedback-error"), overlay.classList.remove("feedback-overlay-show"));
 });
 
-//Переменные окна "добавлено в корзину"
-var basket = document.querySelector(".modal-cart");
-var linksBuy = document.querySelectorAll(".product-popular__btn-buy");
-var basketClose = basket.querySelector(".js-close-cart");
-var continueShop = basket.querySelector(".modal-cart__btn--js");
 
 // Настройка карты
+
 function initMap() {
-    var mapDiv = document.querySelector('.google-maps');
+    var mapDiv = document.querySelector(".google-maps");
     var myLatLng = {
         lat: 59.938810,
         lng: 30.323400
