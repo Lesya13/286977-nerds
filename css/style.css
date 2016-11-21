@@ -179,7 +179,7 @@ button[type="submit"] {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;/*для переноса контента - для прохождения теста на переполнение, а ширина нужна для того, что бы не */
+        flex-wrap: wrap;
     width: 480px;
     list-style: none;
     margin: 0;
@@ -578,9 +578,8 @@ button[type="submit"] {
     background-color: #eeeeee; 
 }
 .map {
+    display: block;
     position: relative;
-    
-    
     min-height: 415px;
     background-color: #eaeaea;
     background: url("../img/map.jpg") no-repeat center center;
@@ -649,7 +648,7 @@ button[type="submit"] {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;/*тест на переполнение*/
+        flex-wrap: wrap;
     width: 380px;
     margin-right: 20px;
 }
@@ -708,7 +707,7 @@ button[type="submit"] {
         -ms-flex-direction: column;
             flex-direction: column;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;/*тест на переполнение*/
+        flex-wrap: wrap;
     width: 560px;
     padding-top: 7px;
 }
@@ -839,7 +838,7 @@ legend {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column wrap;
-        flex-flow: column wrap; /*тест на переполнение*/
+        flex-flow: column wrap; 
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 11px;
@@ -1301,7 +1300,6 @@ textarea:focus {
 .js-btn-close:active::before {
     opacity: 0.1;
 }
-
 .feedback-overlay-show,
 .feedback-show  {
   display: block;

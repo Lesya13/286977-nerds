@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Catalog &mdash; Nerd's</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -180,7 +181,7 @@
                     </div>
                 </div>
                 <div class="google-maps"></div>
-            </div>
+                 </div>
         </main>
 
         <footer class="main-footer">
@@ -201,7 +202,7 @@
         </footer>
         <!-- форма обратной связи -->
         <div class="feedback">
-            <form class="feedback-form">
+           <form class="feedback-form"  action="https://echo.htmlacademy.ru/" method="post">
                 <button class="js-btn-close icon" type="button">Закрыть</button>
                 <fieldset>
                     <legend>Напишите нам</legend>
@@ -218,7 +219,8 @@
             </form>
         </div>
     </div>
-    <script src="js/script.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>

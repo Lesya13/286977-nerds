@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Главная страница &mdash; Nerd's</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,8 +14,7 @@
         <header class="main-header">
             <div class="container">
                 <nav class="main-nav">
-                  <!--Не поняла зачем на главной странице логотип помещать в ссылку?-->
-                   <img class="index-logo" src="img/index-logo.png" width="160" height="65" alt="Nerd's">
+                    <img class="index-logo" src="img/index-logo.png" width="160" height="65" alt="Nerd's">
                     <ul class="main-nav-menu">
                         <li><a class="nav-item-active">Студия</a></li>
                         <li> <a class="nav-item" href="#">Клиенты</a></li>
@@ -129,15 +129,21 @@
                 </section>
 
                 <div class="clients">
-                    <a class="clients-item-first" href="#"><img src="img/htmlacademy.png" width="260" height="180" alt="HTMLacademy"></a>
-                    <a class="clients-item" href="#"><img src="img/borodinski.png" width="260" height="180" alt="Borodinski"></a>
-                    <a class="clients-item" href="#"><img src="img/pinck.png" width="260" height="180" alt="Pinck"></a>
-                    <a class="clients-item" href="#"><img src="img/mishka.png" width="260" height="180" alt="Mishka"></a>
+                    <a class="clients-item-first" href="#">
+                        <img src="img/htmlacademy.png" width="260" height="180" alt="HTMLacademy"></a>
+                    <a class="clients-item" href="#"><img src="img/borodinski.png" width="260" height="180" alt="Borodinski">
+                    </a>
+                    <a class="clients-item" href="#">
+                        <img src="img/pinck.png" width="260" height="180" alt="Pinck">
+                    </a>
+                    <a class="clients-item" href="#">
+                        <img src="img/mishka.png" width="260" height="180" alt="Mishka">
+                    </a>
                 </div>
             </div>
 
             <div class="map">
-               <div class="container">
+                <div class="container">
                     <div class="address">
                         <h2 class="address-title">NЁRDS DESIGN STUDIO</h2>
                         <p>191186, Санкт-Петербург,
@@ -152,7 +158,6 @@
 
         <footer class="main-footer">
             <div class="container">
-               <!---к чему применять дополнительный класс? У container и footer-wrapper взаимоисключающие значения-->
                 <div class="footer-wrapper">
                     <div class="social-box">
                         <a class="social  social-btn-vk  icon" href="#">Вконтакте</a>
@@ -169,8 +174,8 @@
         </footer>
         <!-- форма обратной связи -->
         <div class="feedback">
-           <div class="feedback-overlay"></div>
-            <form class="feedback-form">
+            <div class="feedback-overlay"></div>
+            <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
                 <button class="js-btn-close icon" type="button">Закрыть</button>
                 <fieldset>
                     <legend>Напишите нам</legend>
@@ -187,8 +192,8 @@
             </form>
         </div>
     </div>
-     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
