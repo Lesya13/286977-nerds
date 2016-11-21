@@ -1,5 +1,4 @@
 //обратная связь
-
 var link = document.querySelector(".address-btn");
 var popup = document.querySelector(".feedback");
 var close = document.querySelector(".js-btn-close");
@@ -37,15 +36,14 @@ overlay.addEventListener("click", function (a) {
 popup.classList.contains("feedback-show") && (popup.classList.remove("feedback-show"), popup.classList.remove("feedback-error"), overlay.classList.remove("feedback-overlay-show"));
 });
 
-
 // Настройка карты
-
 function initMap() {
     var mapDiv = document.querySelector(".google-maps");
     var myLatLng = {
         lat: 59.938810,
         lng: 30.323400
     };
+    
     var map = new google.maps.Map(mapDiv, {
         center: myLatLng,
         zoom: 15
@@ -57,3 +55,4 @@ function initMap() {
         icon: image
     });
 }
+
