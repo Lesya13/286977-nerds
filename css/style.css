@@ -277,8 +277,11 @@ button[type="submit"] {
     border-radius: 50%;
     cursor: pointer;
 }
-.slide-text {
+.slide-content {
     width: 500px;
+}
+.slide-text span {
+    display: block;
 }
 .slide-title {
     width: 600px;
@@ -287,7 +290,9 @@ button[type="submit"] {
     font-weight: 500;
     margin-top: 79px;
     margin-bottom: 25px;
-    
+}
+.slide-title span {
+   display: block; 
 }
 .slide p {
     margin-bottom: 40px;
@@ -1237,7 +1242,7 @@ legend {
     color: #a3a3a3;
 }
 .feedback-input {
-    width: 362px;
+    width: 360px;
     padding: 13px;
     font-family: inherit;
     font-size: 16px;
