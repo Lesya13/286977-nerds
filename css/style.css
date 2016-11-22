@@ -280,10 +280,15 @@ button[type="submit"] {
 .slide-content {
     width: 500px;
 }
-.slide-text span {
-    display: block;
+
+.slide-text-second {
+    width: 430px;
 }
-.slide-title {
+.slide-text-three {
+    width: 350px;
+}
+.slide-title,
+.slide-title-three {
     width: 600px;
     font-size: 55px;
     line-height: 55px;
@@ -291,8 +296,8 @@ button[type="submit"] {
     margin-top: 79px;
     margin-bottom: 25px;
 }
-.slide-title span {
-   display: block; 
+.slide-title-three {
+    width: 500px;
 }
 .slide p {
     margin-bottom: 40px;
