@@ -6,7 +6,7 @@
     <title>Catalog &mdash; Nerd's</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,16 +53,16 @@
                                 </div>
                                 <div class="filter-item">
                                     <h2 class="total-title">Сетка:</h2>
-                                    <input class="filter-radio" type="radio" name="grid" id="adaptive" checked>
-                                    <label class="filter-text-radio" for="adaptive">Адаптивная</label>
+                                    <input class="filter-radio" type="radio" name="grid" id="adaptive" disabled>
+                                    <label class="filter-text-radio icon" for="adaptive">Адаптивная</label>
                                     <input class="filter-radio" type="radio" name="grid" id="fixed">
-                                    <label class="filter-text-radio" for="fixed">Фиксированная</label>
+                                    <label class="filter-text-radio icon" for="fixed">Фиксированная</label>
                                     <input class="filter-radio" type="radio" name="grid" id="rubber">
-                                    <label class="filter-text-radio" for="rubber">Резиновая</label>
+                                    <label class="filter-text-radio icon" for="rubber">Резиновая</label>
                                 </div>
                                 <div class="filter-item filter-alt-pos">
                                     <h2 class="total-title">Особенности:</h2>
-                                    <input class="filter-checkbox" type="checkbox" name="feature" id="slider" checked>
+                                    <input class="filter-checkbox" type="checkbox" name="feature" id="slider" disabled>
                                     <label class="filter-text-checkbox icon" for="slider">Слайдер</label>
 
                                     <input class="filter-checkbox" type="checkbox" name="feature" id="advantage">
@@ -132,7 +132,7 @@
                                 <span class="circle circle-item"></span>
                                 <img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka">
                                 <div class="catalog-baner">
-                                   <a class="baner-title" href="#">Mishka</a>
+                                    <a class="baner-title" href="#">Mishka</a>
                                     <p class="baner-text">Интернет-магазин вязаных игрушек</p>
                                     <button class="btn baner-btn">9 900 руб.</button>
                                 </div>
@@ -181,7 +181,7 @@
                     </div>
                 </div>
                 <div class="google-maps"></div>
-                 </div>
+            </div>
         </main>
 
         <footer class="main-footer">
@@ -202,7 +202,7 @@
         </footer>
         <!-- форма обратной связи -->
         <div class="feedback">
-           <form class="feedback-form"  action="https://echo.htmlacademy.ru/" method="post">
+            <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
                 <button class="js-btn-close icon" type="button">Закрыть</button>
                 <fieldset>
                     <legend>Напишите нам</legend>
@@ -219,8 +219,8 @@
             </form>
         </div>
     </div>
-   <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
